@@ -1,17 +1,15 @@
 {
-   "builds": [
+  "version": 2,
+  "builds": [
     {
       "src": "manage.py",
-      "use": "@vercel/python",
-      "config": {
-        "installCommand": "pip install --upgrade pip && pip install -r requirements.txt"
-      }
+      "use": "@vercel/python"
     }
   ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "djangoTest/wsgi.py"
-        }
-    ]
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "manage.py"
+    }
+  ]
 }
