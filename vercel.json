@@ -1,14 +1,13 @@
 {
-    "builds": [
-        {
-            "src": "djangoTest/wsgi.py",
-            "use": "@vercel/python",
-            "config": {
-                "maxLamdaSize": "15mb",
-                "runtime": "python3.12"
-            }
-        }
-    ],
+   "builds": [
+    {
+      "src": "manage.py",
+      "use": "@vercel/python",
+      "config": {
+        "installCommand": "pip install --upgrade pip && pip install -r requirements.txt"
+      }
+    }
+  ],
     "routes": [
         {
             "src": "/(.*)",
